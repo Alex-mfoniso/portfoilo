@@ -1,3 +1,130 @@
+/* Experience Section */
+#experience .experience {
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 20px 90px;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+#experience .experience-header {
+  max-width: 780px;
+  margin: 0 auto 44px;
+}
+#experience .experience-header .section-title {
+  margin-bottom: 14px;
+}
+#experience .experience-header p {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto;
+  font-size: 1.6rem;
+  line-height: 2.7rem;
+}
+#experience .experience-timeline {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  padding-left: 24px;
+}
+#experience .experience-timeline::before {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 6px;
+  bottom: 6px;
+  width: 2px;
+  background: linear-gradient(180deg, crimson 0%, #485563 100%);
+}
+#experience .experience-item {
+  position: relative;
+  padding: 34px 28px;
+  border-radius: 16px;
+  margin-bottom: 22px;
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+  box-shadow: 0 12px 32px #00000024;
+}
+#experience .experience-item::before {
+  content: "";
+  position: absolute;
+  left: -24px;
+  top: 26px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: crimson;
+  box-shadow: 0 0 0 4px #fff;
+}
+#experience .experience-item:hover {
+  box-shadow: 0 16px 34px #00000035;
+}
+#experience .experience-meta {
+  margin-bottom: 18px;
+}
+#experience .experience-duration {
+  color: #fbc0c9;
+  font-size: 1.3rem;
+  font-weight: 500;
+  letter-spacing: 0.09rem;
+  text-transform: uppercase;
+  margin: 0 0 8px;
+}
+#experience .experience-item h2 {
+  font-size: 2.7rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #fff;
+}
+#experience .experience-item h3 {
+  color: crimson;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+#experience .experience-item ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#experience .experience-item li {
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+  color: #f3f3f3;
+  line-height: 2.5rem;
+  padding-left: 20px;
+  position: relative;
+}
+#experience .experience-item li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #fbc0c9;
+}
+@media only screen and (min-width: 768px) {
+  #experience .experience {
+    padding: 110px 20px 100px;
+  }
+  #experience .experience-timeline {
+    padding-left: 40px;
+  }
+  #experience .experience-timeline::before {
+    left: 12px;
+  }
+  #experience .experience-item {
+    padding: 38px 42px;
+  }
+  #experience .experience-item::before {
+    left: -35px;
+    top: 30px;
+    width: 16px;
+    height: 16px;
+  }
+}
+/* End Experience Section */
 @import "https://fonts.googleapis.com/css?family=Montserrat:300, 400, 700&display=swap";
 * {
   padding: 0;
