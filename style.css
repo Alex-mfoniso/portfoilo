@@ -389,6 +389,34 @@ p {
 #hero h1:nth-child(3) span {
   animation-delay: 2.5s;
 }
+#hero .hero-typewriter {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin-top: 12px;
+  min-height: 2.9rem;
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0.05rem;
+}
+#hero .hero-typewriter__text {
+  display: inline;
+}
+#hero .hero-typewriter__cursor {
+  display: inline-block;
+  width: 0.18em;
+  height: 1em;
+  margin-left: 0.18em;
+  background-color: crimson;
+  vertical-align: -0.12em;
+  animation: hero_cursor_blink 1s step-end infinite;
+}
+#hero .hero-typewriter.is-complete .hero-typewriter__cursor {
+  opacity: 0;
+  animation: none;
+}
 
 /* End Hero Section */
 
@@ -503,6 +531,36 @@ p {
 #projects .project-info p {
   color: white;
 }
+#projects .project-category {
+  margin-top: 8px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.08rem;
+  text-transform: uppercase;
+  color: #fbc0c9;
+}
+#projects .project-tags {
+  margin-top: 10px;
+  font-size: 1.3rem;
+  line-height: 2.2rem;
+  color: rgba(255, 255, 255, 0.86);
+}
+#projects .project-link {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 18px;
+  border: 2px solid crimson;
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 0.08rem;
+  text-transform: uppercase;
+  transition: 0.3s ease;
+  transition-property: background-color, color;
+}
+#projects .project-link:hover {
+  background-color: crimson;
+  color: white;
+}
 #projects .project-img {
   flex-basis: 50%;
   height: 300px;
@@ -521,8 +579,89 @@ p {
 }
 #projects .project-img img {
   transition: 0.3s ease transform;
+  object-position: center top;
+}
+#projects .project-image--stories {
+  object-position: center top;
+}
+#projects .project-placeholder {
+  width: 100%;
+  height: 100%;
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+  background: linear-gradient(135deg, #1f2937 0%, #485563 100%);
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s ease transform;
+}
+#projects .project-placeholder::before {
+  content: "";
+  position: absolute;
+  inset: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  pointer-events: none;
+}
+#projects .project-placeholder__top {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.08rem;
+  text-transform: uppercase;
+  color: #fbc0c9;
+}
+#projects .project-placeholder__code {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  min-height: 120px;
+  font-size: 4.4rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.94);
+}
+#projects .project-placeholder__chart {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+  align-items: end;
+  min-height: 120px;
+}
+#projects .project-placeholder__chart span {
+  display: block;
+  border-radius: 6px 6px 0 0;
+  background: linear-gradient(180deg, crimson 0%, #fbc0c9 100%);
+}
+#projects .project-placeholder--trading .project-placeholder__chart span:nth-child(1) {
+  height: 38px;
+}
+#projects .project-placeholder--trading .project-placeholder__chart span:nth-child(2) {
+  height: 72px;
+}
+#projects .project-placeholder--trading .project-placeholder__chart span:nth-child(3) {
+  height: 54px;
+}
+#projects .project-placeholder--trading .project-placeholder__chart span:nth-child(4) {
+  height: 98px;
+}
+#projects .project-placeholder--trading .project-placeholder__chart span:nth-child(5) {
+  height: 64px;
+}
+#projects .project-placeholder--trading .project-placeholder__chart span:nth-child(6) {
+  height: 110px;
 }
 #projects .project-item:hover .project-img img {
+  transform: scale(1.1);
+}
+#projects .project-item:hover .project-placeholder {
   transform: scale(1.1);
 }
 /* End Projects section */
@@ -692,6 +831,16 @@ p {
     font-weight: 500;
   }
 }
+@keyframes hero_cursor_blink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
 /* End Keyframes */
 
 /* Media Query For Tablet */
@@ -707,6 +856,10 @@ p {
   /* Hero */
   #hero h1 {
     font-size: 7rem;
+  }
+  #hero .hero-typewriter {
+    font-size: 2.4rem;
+    min-height: 3.9rem;
   }
   /* End Hero */
 
