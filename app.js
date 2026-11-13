@@ -7,7 +7,7 @@ const heroTypewriter = document.querySelector('#hero .hero-typewriter');
 const heroTypewriterText = document.querySelector('#hero .hero-typewriter__text');
 const heroTypewriterCursor = document.querySelector('#hero .hero-typewriter__cursor');
 const heroTypewriterSentence =
-	'Frontend Engineer building fast, scalable products for startups and businesses.';
+	'Software Engineer building reliable web applications, developer tools, and digital products.';
 let heroTypewriterStarted = false;
 
 hamburger.addEventListener('click', () => {
